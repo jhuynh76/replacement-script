@@ -20,8 +20,8 @@ $('#btn').click(function(){
 			.replace(/[ù]/g, '&ugrave;')
 			.replace(/[Û]/g, '&Ucirc;')
 			.replace(/[û]/g, '&ucirc;')
-			.replace(/®/g, '<sup style="font-size:10px">&reg;</sup>')
-			.replace(/©/g, '<sup style="font-size:10px">&copy;</sup>')
+			.replace(/®/g, '<sup style="font-size:10px; line-height:0">&reg;</sup>')
+			.replace(/©/g, '<sup style="font-size:10px; line-height:0">&copy;</sup>')
 			.replace(/“/g, '&ldquo')
 			.replace(/”/g, '&rdquo')
 			.replace(/\n/g, '<br>\r');

@@ -16,9 +16,7 @@
 	<label>Result</label>
 	<textarea id="result"></textarea>
 
-	<p>
-		Sample text: Dans l'arri&egrave;re-pays de Provence, &agrave; 30 kilom&egrave;tres au sud-ouest de Draguignan, l'Abbaye du Thoronet est un chef-d'œuvre de l'art roman proven&ccedil;al. AMEX ®
-	</p>
+	<p>{{ sample }}</p>
 
 </body>
 
@@ -26,9 +24,14 @@
 <script src="js/script.js"></script><!--jQuery branch-->
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script>
-	var obj = new Vue({
+	var title = new Vue({
 		el: 'h1',
-		data: {title: 'Convert accents to HTML code'}
+		data: { title: 'French accent converter to HTML codes' }
+	});
+
+	var sample = new Vue({
+		el: 'p',
+		data: { sample: "Maître Corbeau, sur un arbre perché, Tenait en son bec un fromage. Maître Renard, par l’odeur alléché, Lui tint à peu près ce langage : « Hé ! bonjour, Monsieur du Corbeau. Que vous êtes joli ! Que vous me semblez beau. AMEX ®" }
 	});
 </script>
 </html>

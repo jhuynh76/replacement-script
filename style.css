@@ -16,6 +16,8 @@ textarea{
 	display: block;
 }
 
+p{max-width: 50%}
+
 .btn{
 	display: block;
 	padding: 15px 10px;
