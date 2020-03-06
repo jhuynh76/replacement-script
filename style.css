@@ -1,3 +1,9 @@
+label{
+	display: block;
+	font-size: 1.4em;
+	margin-bottom: 5px;
+}
+
 input,button,textarea{
 	font-size: 16px;
 	margin-bottom: 15px;
