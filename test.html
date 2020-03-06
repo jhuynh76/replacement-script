@@ -19,13 +19,6 @@
 		Dans l'arri&egrave;re-pays de Provence, &agrave; 30 kilom&egrave;tres au sud-ouest de Draguignan, l'Abbaye du Thoronet est un chef-d'œuvre de l'art roman proven&ccedil;al.
 	</p>
 
-	<p>
-		Amex<sup style="font-size:10px">&reg;</sup> listings:
-Dans l'arri&egrave;re-pays de Provence, &agrave; 30 kilom&egrave;tres au sud-ouest de Draguignan<sup style="font-size:10px">&reg;</sup>, l'Abbaye du Thoronet est un chef-d'œuvre de l'art roman proven&ccedil;al.
-
-<sup style="font-size:10px">&copy;</sup>2020. All rights reserved. <sup style="font-size:10px">&copy;</sup> aa <sup style="font-size:10px">&copy;</sup>
-	</p>
-
 </body>
 
 <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
@@ -55,7 +48,8 @@ Dans l'arri&egrave;re-pays de Provence, &agrave; 30 kilom&egrave;tres au sud-oue
 				.replace(/®/g, '<sup style="font-size:10px">&reg;</sup>')
 				.replace(/©/g, '<sup style="font-size:10px">&copy;</sup>')
 				.replace(/“/g, '&ldquo')
-				.replace(/”/g, '&rdquo');
+				.replace(/”/g, '&rdquo')
+				.replace(/\n/g, '<br>\r');
 
 		$('#result').val(replace);
 	});
