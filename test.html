@@ -6,11 +6,11 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<h1>Convert accents to HTML code</h1>
 
+	<h1>{{ title }}</h1>
 	<label>Text to Convert</label>
 	<textarea id="txt"></textarea>
-	
+
 	<button id="btn" class="btn">Convert</button>
 
 	<label>Result</label>
@@ -22,37 +22,13 @@
 
 </body>
 
-<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/script.js"></script><!--jQuery branch-->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script>
-	$('#btn').click(function(){
-		var txt = $('#txt').val();
-		var replace = 
-			txt.replace(/[À]/g, '&Agrave;')
-				.replace(/[à]/g, '&agrave;')
-				.replace(/[Â]/g, '&Acirc;')
-				.replace(/[â]/g, '&acirc;')
-				.replace(/[Ç]/g, '&Ccedil;')
-				.replace(/[ç]/g, '&ccedil;')
-				.replace(/[È]/g, '&Egrave;')
-				.replace(/[è]/g, '&egrave;')
-				.replace(/[É]/g, '&Eacute;')
-				.replace(/[é]/g, '&eacute;')
-				.replace(/[Ê]/g, '&Ecirc;')
-				.replace(/[ê]/g, '&ecirc;')
-				.replace(/[Î]/g, '&Icirc;')
-				.replace(/[Ô]/g, '&Ocirc;')
-				.replace(/[ô]/g, '&ocirc;')
-				.replace(/[Ù]/g, '&Ugrave;')
-				.replace(/[ù]/g, '&ugrave;')
-				.replace(/[Û]/g, '&Ucirc;')
-				.replace(/[û]/g, '&ucirc;')
-				.replace(/®/g, '<sup style="font-size:10px">&reg;</sup>')
-				.replace(/©/g, '<sup style="font-size:10px">&copy;</sup>')
-				.replace(/“/g, '&ldquo')
-				.replace(/”/g, '&rdquo')
-				.replace(/\n/g, '<br>\r');
-
-		$('#result').val(replace);
+	var obj = new Vue({
+		el: 'h1',
+		data: {title: 'Convert accents to HTML code'}
 	});
 </script>
 </html>
